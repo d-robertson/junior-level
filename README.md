@@ -1,4 +1,4 @@
-# Express Authentication
+# junior-level
 
 Express authentication template using Passport + flash messages + custom middleware
 
