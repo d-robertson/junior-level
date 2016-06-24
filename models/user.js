@@ -1,6 +1,6 @@
 'use strict';
 
-var bcrypt = require('bcrypt-nodejs');
+var bcrypt = require('bcrypt');
 
 module.exports = function(sequelize, DataTypes) {
   var user = sequelize.define('user', {
@@ -37,12 +37,13 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     instanceMethods: {
-      vaildPassword: function(password) {
+      validPassword: function(password) {
         return bcrypt.compareSync(password, this.password);
       },
       toJSON: function() {
         var jsonUser = this.get();
         delete jsonUser.password;
+        return jsonUser;
       }
     },
     hooks: {
@@ -50,7 +51,7 @@ module.exports = function(sequelize, DataTypes) {
         // hash password and save hash to user
         // console.log(createdUser); hits this one fine.
         console.log(createdUser.password);
-        var hash = bcrypt.hashSync(createdUser.password);
+        var hash = bcrypt.hashSync(createdUser.password, 10);
         // console.log(hash); //doesn't hit this console log!!!!
         createdUser.password = hash;
         cb(null, createdUser);
