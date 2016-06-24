@@ -1,4 +1,7 @@
 'use strict';
+
+var bcrypt = require('bcrypt-nodejs');
+
 module.exports = function(sequelize, DataTypes) {
   var user = sequelize.define('user', {
     email: {
@@ -9,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       }
     },
-    password: { 
+    password: {
       type: DataTypes.STRING,
       validate: {
         len: {
@@ -31,6 +34,26 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+      }
+    },
+    instanceMethods: {
+      vaildPassword: function(password) {
+        return bcrypt.compareSync(password, this.password);
+      },
+      toJSON: function() {
+        var jsonUser = this.get();
+        delete jsonUser.password;
+      }
+    },
+    hooks: {
+      beforeCreate: function(createdUser, options, cb) {
+        // hash password and save hash to user
+        // console.log(createdUser); hits this one fine.
+        console.log(createdUser.password);
+        var hash = bcrypt.hashSync(createdUser.password);
+        // console.log(hash); //doesn't hit this console log!!!!
+        createdUser.password = hash;
+        cb(null, createdUser);
       }
     }
   });
