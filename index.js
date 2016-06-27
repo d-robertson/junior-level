@@ -5,6 +5,7 @@ var session = require('express-session');
 var passport = require('./config/ppConfig');
 var flash = require('connect-flash');
 var isLoggedin = require('./middleware/isLoggedin');
+var request = require('request');
 var app = express();
 
 app.set('view engine', 'ejs');
@@ -27,7 +28,14 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-  res.render('index');
+  request({
+    url: 'http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=entry+junior'
+  }, function(error, response, body){
+    if(!error && response.statusCode === 200){
+      var dataObj = JSON.parse(body);
+      res.render('index', { results: dataObj });
+    }
+  });
 });
 
 app.get('/profile', isLoggedin, function(req, res) {

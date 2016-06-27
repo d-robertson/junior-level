@@ -1,6 +1,18 @@
-<h2>Home</h2>
+<div class="well">
+  <h2>Home</h2>
+  <a href="/auth/signup">Signup</a>
+  <a href="/auth/login">Login</a>
+  <a href="/auth/logout">Logout</a>
+  <a href="/profile">Profile</a>
+</div>
 
-<a href="/auth/signup">Signup</a>
-<a href="/auth/login">Login</a>
-<a href="/auth/logout">Logout</a>
-<a href="/profile">Profile</a>
+<% results.resultItemList.forEach(function(job){ %>
+  <div class="well">
+    <h2><%= job.jobTitle %></h2>
+    <h3><%= job.company %></h3>
+    <h3><%= job.location %></h3>
+    <a href=<%= job.detailUrl %> class="btn btn-info">see job posting</a>
+  </div>
+<% }); %>
+
+
