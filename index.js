@@ -28,14 +28,26 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-  request({
-    url: 'http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=entry+junior'
-  }, function(error, response, body){
-    if(!error && response.statusCode === 200){
-      var dataObj = JSON.parse(body);
-      res.render('index', { results: dataObj });
+  if(!session.results){
+    console.log('IF!!!!!');
+    var url = 'http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=entry+junior';
+    if(req.query.zipcode && req.query.zipcode !== session.storedZip){
+      url += '&city=' + req.query.zipcode;
+      session.storedZip = req.query.zipcode;
     }
-  });
+    request({
+      url: url
+    }, function(error, response, body){
+      if(!error && response.statusCode === 200){
+        var dataObj = JSON.parse(body);
+        session.results = dataObj.resultItemList;
+        res.render('index', { results: dataObj.resultItemList });
+      }
+    });
+  } else {
+    console.log('ELSE!!!!!')
+    res.render('index', { results: session.results });
+  }
 });
 
 app.get('/profile', isLoggedin, function(req, res) {

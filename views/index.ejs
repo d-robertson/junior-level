@@ -6,7 +6,14 @@
   <a href="/profile">Profile</a>
 </div>
 
-<% results.resultItemList.forEach(function(job){ %>
+<div class="form-group">
+  <form action="/" method="GET">
+    <input type="text" name="zipcode" class="form-control">
+    <input type="submit">
+  </form>
+</div>
+
+<% results.forEach(function(job){ %>
   <div class="well">
     <h2><%= job.jobTitle %></h2>
     <h3><%= job.company %></h3>
