@@ -28,19 +28,22 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-  if(!session.results){
+  if(!req.session.results || req.query.zipcode !== req.session.storedZip){
     console.log('IF!!!!!');
     var url = 'http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=entry+junior';
-    if(req.query.zipcode && req.query.zipcode !== session.storedZip){
+
+    if(req.query.zipcode || req.query.skill){
       url += '&city=' + req.query.zipcode;
-      session.storedZip = req.query.zipcode;
+      req.session.storedZip = req.query.zipcode;
     }
+
     request({
       url: url
     }, function(error, response, body){
+      // console.log(response);
       if(!error && response.statusCode === 200){
         var dataObj = JSON.parse(body);
-        session.results = dataObj.resultItemList;
+        req.session.results = dataObj.resultItemList;
         res.render('index', { results: dataObj.resultItemList });
       }
     });
@@ -49,6 +52,21 @@ app.get('/', function(req, res) {
     res.render('index', { results: session.results });
   }
 });
+
+// app.get('/', function(req, res) {
+//   var url = 'https://authenticjobs.com/api/?api_key=1e053aff7cf7550dbc3d62c7529f4124&method=aj.jobs.search&keywords=entry,junior,developer';
+
+//   request({
+//     url: url
+//   }, function(error, response, body){
+//     if(!error && response.statusCode === 200){
+//       var dataObj = JSON.parse(body);
+//       console.log(dataObj);
+//       req.session.results = dataObj;
+//       res.render
+//     }
+//   })
+// })
 
 app.get('/profile', isLoggedin, function(req, res) {
   res.render('profile');

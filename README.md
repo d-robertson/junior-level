@@ -28,4 +28,11 @@ Express authentication template using Passport + flash messages + custom middlew
 
 ##### My Api's 
   * Dice- 'http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=entry+junior'
-  *
+  *Authentic- key: 1e053aff7cf7550dbc3d62c7529f4124 baseUrl: https://authenticjobs.com/api/
+
+###### Goals
+  * select jobs to save using database's
+  * navbar--All jobs/Your jobs/user submit job/login
+  * linkedin oAuth
+  * css styles
+  * User Profile
