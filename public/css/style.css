@@ -16,17 +16,18 @@
 .well {
   border-radius: 0px;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 1px;
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
 .underNav {
   margin-top: 150px;
+  text-align: center;
 }
 
 body {
-  background-color: #142D3C;
+  background-color: #193441;
 }
 
 li {
@@ -34,6 +35,10 @@ li {
   margin-right: 0px;
   padding-right: 0px;
   padding-left: 0px; 
+}
+
+.a {
+  color: #fcfff5;
 }
 
 .container-fluid {
@@ -46,13 +51,20 @@ li {
 .navbar {
   margin-left: 0px;
   margin-right: 0px;
+  margin-bottom: 0px;
   padding-right: 0px;
   padding-left: 0px; 
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
 }
 
 .navbar-nav {
   margin-left: 0px;
   margin-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
   padding-right: 0px;
   padding-left: 0px;
 }
@@ -66,16 +78,57 @@ li {
 
 #navLink {
   display: inline-block;
-  width: 25%;
+  width: 50%;
   text-align: center;
   border: solid black 1px;
   margin-left: 1px;
   margin-right: -6px;
   padding-right: 0px;
   padding-left: 0px;
-    
+  height: 52px;
+  background-color: #91aa9d;
+  color: #fcfff5;  
 }
 
 .navheader {
   text-align: center;
+}
+
+#tempdiv {
+  height: 182px;
+}
+
+#loginDiv {
+  background-color: #d1dbbd;
+}
+
+.form-control {
+  border-radius: 0px;
+}
+
+.theNav {
+  background-color: #d1dbbd;
+}
+
+.saveBtn {
+  background-color: #3e606f;
+  color: #fcfff5;
+}
+
+.jobUrl {
+  background-color: #3e606f;
+  color: #fcfff5;
+}
+
+.subBtn {
+  background-color: #91aa9d;
+  color: #fcfff5;
+}
+
+.wellColor {
+  background-color: #fcfff5;
+}
+
+#headerA {
+  color: #193441;
 }

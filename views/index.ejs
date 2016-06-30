@@ -2,18 +2,18 @@
   <div class="well form-control">
     <form action="/" method="GET" class="form-group">
       <input type="text" name="zipcode" class="" placeholder="zipcode">
-      <input type="submit" class="btn-sm btn-success">
+      <input type="submit" class="btn-sm subBtn">
     </form>
   </div>
 </div>
 <div class="col-xs-12">
   <% results.forEach(function(job){ %>
-    <div class="well">
+    <div class="well wellColor">
       <h2 class="jobTitle"><%= job.jobTitle %></h2>
       <h3 class="jobCompany"><%= job.company %></h3>
       <h3 class="jobLocation"><%= job.location %></h3>
-      <a href=<%= job.detailUrl %> target="_blank" class="btn btn-info jobUrl">see job posting</a>
-      <button class="btn btn-info saveBtn" action="/favJob">Save this job</button>
+      <a href=<%= job.detailUrl %> target="_blank" class="btn jobUrl">see job posting</a>
+      <button class="btn saveBtn" action="/favJob">Save this job</button>
     </div>
   <% }); %>
 </div>

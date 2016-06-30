@@ -30,6 +30,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
+  console.log(req.user);
   if(!req.session.results || req.query.zipcode !== req.session.storedZip){
     console.log('IF!!!!!');
     var url = 'http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=entry+junior';

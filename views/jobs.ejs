@@ -1,14 +1,14 @@
-<h2>Your followed Jobs</h2>
 
-<a href="/">Home</a>
-
-<% results.forEach(function(job){ %>
-  <div class="well">
-      <h2 class="jobTitle"><%= job.title %></h2>
-      <h3 class="jobCompany"><%= job.company %></h3>
-      <h3 class="jobLocation"><%= job.location %></h3>
-      <h3 class="jobId"><%= job.id %></h3>
-      <a href="<%= job.url %>" target="_blank" class="btn btn-info jobUrl">see job posting</a>
-      <button class="btn btn-danger deleteBtn" action="/deleteJob">Delete this job</button>
-    </div>
-<% }); %>
+<div class="container underNav"></div>
+<div class="col-xs-12">
+  <% results.forEach(function(job){ %>
+    <div class="well wellColor">
+        <h2 class="jobTitle"><%= job.title %></h2>
+        <h3 class="jobCompany"><%= job.company %></h3>
+        <h3 class="jobLocation"><%= job.location %></h3>
+        <h3 class="jobId"><%= job.id %></h3>
+        <a href="<%= job.url %>" target="_blank" class="btn btn-info jobUrl">see job posting</a>
+        <button class="btn btn-danger deleteBtn" action="/deleteJob">Delete this job</button>
+      </div>
+  <% }); %>
+</div>
