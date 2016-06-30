@@ -83,8 +83,16 @@ app.post('/favJob', function(req, res){
   }
 });
 
-app.get('/profile', isLoggedin, function(req, res) {
-  res.render('profile');
+app.get('/jobs', isLoggedin, function(req, res) {
+  db.user.findOne({
+    where: {
+      id: req.user.id
+    }
+  }).then(function(user){
+    user.getJobs().then(function(jobs){
+      res.render('jobs', { results: jobs });
+    });
+  });
 });
 
 app.use('/auth', require('./controllers/auth'));
