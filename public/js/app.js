@@ -17,7 +17,6 @@ $(document).ready(function(){
       }
 
       var that = this;
-      console.log(that);
 
       $.ajax({
         method: 'POST',
@@ -36,5 +35,27 @@ $(document).ready(function(){
       });
     }
     console.log('passed if');
+  });
+
+  $('.deleteBtn').on('click', function(e){
+    e.preventDefault();
+
+    var routeUrl = $(this).attr('action');
+    var id = $(this).parent()[0].children[3].textContent;
+    var that = this;
+    $.ajax({
+      method: 'DELETE',
+      url: routeUrl + '/' + id,
+      success: function(response){
+        console.log('delete success');
+        $(that).parent().remove();
+      },
+      error: function(xhr, ajaxOptions, thrownError){
+        console.log('delete error');
+        console.log(xhr);
+        console.log(ajaxOptions);
+        console.log(thrownError);
+      }
+    });
   });
 });

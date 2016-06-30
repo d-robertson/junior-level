@@ -95,6 +95,19 @@ app.get('/jobs', isLoggedin, function(req, res) {
   });
 });
 
+app.delete('/deleteJob/:id', function(req, res){
+  console.log('hit delete route');
+  db.user.findOne({
+    where: {
+      id: req.user.id
+    }
+  }).then(function(user){
+    user.removeJob(req.params.id).then(function(){
+      res.send('delted job');
+    });
+  });
+});
+
 app.use('/auth', require('./controllers/auth'));
 
 var server = app.listen(process.env.PORT || 3000);

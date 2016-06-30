@@ -7,7 +7,8 @@
       <h2 class="jobTitle"><%= job.title %></h2>
       <h3 class="jobCompany"><%= job.company %></h3>
       <h3 class="jobLocation"><%= job.location %></h3>
-      <a href=<%= job.url %> target="_blank" class="btn btn-info jobUrl">see job posting</a>
+      <h3 class="jobId"><%= job.id %></h3>
+      <a href="<%= job.url %>" target="_blank" class="btn btn-info jobUrl">see job posting</a>
       <button class="btn btn-danger deleteBtn" action="/deleteJob">Delete this job</button>
     </div>
 <% }); %>
