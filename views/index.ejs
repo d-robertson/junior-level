@@ -1,16 +1,10 @@
-<div class="well">
-  <h2>Home</h2>
-  <a href="/auth/signup">Signup</a>
-  <a href="/auth/login">Login</a>
-  <a href="/auth/logout">Logout</a>
-  <a href="/jobs">Jobs</a>
-</div>
-
-<div class="form-group">
-  <form action="/" method="GET">
-    <input type="text" name="zipcode" class="" placeholder="zipcode">
-    <input type="submit" class="btn btn-success">
-  </form>
+<div class="container underNav">
+  <div class="well form-control">
+    <form action="/" method="GET" class="form-group">
+      <input type="text" name="zipcode" class="" placeholder="zipcode">
+      <input type="submit" class="btn-sm btn-success">
+    </form>
+  </div>
 </div>
 <div class="col-xs-12">
   <% results.forEach(function(job){ %>

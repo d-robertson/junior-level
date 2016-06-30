@@ -1,0 +1,81 @@
+.removeGutter {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px; 
+}
+
+.btn {
+  border-radius: 0px;
+}
+
+.btn-sm {
+  border-radius: 0px;
+}
+
+.well {
+  border-radius: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.underNav {
+  margin-top: 150px;
+}
+
+body {
+  background-color: #142D3C;
+}
+
+li {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px; 
+}
+
+.container-fluid {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px; 
+}
+
+.navbar {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px; 
+}
+
+.navbar-nav {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.nav {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px; 
+}
+
+#navLink {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  border: solid black 1px;
+  margin-left: 1px;
+  margin-right: -6px;
+  padding-right: 0px;
+  padding-left: 0px;
+    
+}
+
+.navheader {
+  text-align: center;
+}
