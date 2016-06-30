@@ -4,10 +4,10 @@
 
 <% results.forEach(function(job){ %>
   <div class="well">
-      <h2 class="jobTitle"><%= job.jobTitle %></h2>
+      <h2 class="jobTitle"><%= job.title %></h2>
       <h3 class="jobCompany"><%= job.company %></h3>
       <h3 class="jobLocation"><%= job.location %></h3>
-      <a href=<%= job.detailUrl %> target="_blank" class="btn btn-info jobUrl">see job posting</a>
-      <button class="btn btn-info saveBtn" action="/favJob">Save this job</button>
+      <a href=<%= job.url %> target="_blank" class="btn btn-info jobUrl">see job posting</a>
+      <button class="btn btn-danger deleteBtn" action="/deleteJob">Delete this job</button>
     </div>
 <% }); %>
