@@ -8,18 +8,25 @@
 
 <div class="form-group">
   <form action="/" method="GET">
-    <input type="text" name="zipcode" class="form-control">
+    <input type="text" name="zipcode" class="" placeholder="zipcode">
     <input type="submit" class="btn btn-success">
   </form>
 </div>
+<div class="col-xs-12">
+  <% results.forEach(function(job){ %>
+    <div class="well">
+      <h2 class="jobTitle"><%= job.jobTitle %></h2>
+      <h3 class="jobCompany"><%= job.company %></h3>
+      <h3 class="jobLocation"><%= job.location %></h3>
+      <a href=<%= job.detailUrl %> target="_blank" class="btn btn-info jobUrl">see job posting</a>
+      <button class="btn btn-info saveBtn" action="/favJob">Save this job</button>
+    </div>
+  <% }); %>
+</div>
 
-<% results.forEach(function(job){ %>
-  <div class="well">
-    <h2><%= job.jobTitle %></h2>
-    <h3><%= job.company %></h3>
-    <h3><%= job.location %></h3>
-    <a href=<%= job.detailUrl %> class="btn btn-info">see job posting</a>
-  </div>
-<% }); %>
+
+
+
+
 
 
