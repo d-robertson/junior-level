@@ -1,134 +1,287 @@
-.removeGutter {
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-right: 0px;
-  padding-left: 0px; 
-}
+@media (max-width : 760px) {
+  .removeGutter {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px; 
+  }
 
-.btn {
-  border-radius: 0px;
-}
+  .btn {
+    border-radius: 0px;
+  }
 
-.btn-sm {
-  border-radius: 0px;
-}
+  .btn-sm {
+    border-radius: 0px;
+  }
 
-.well {
-  border-radius: 0px;
-  margin-top: 0px;
-  margin-bottom: 1px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
+  .well {
+    border-radius: 0px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 
-.underNav {
-  margin-top: 150px;
-  text-align: center;
-}
+  .underNav {
+    margin-top: 150px;
+    text-align: center;
+  }
 
-body {
-  background-color: #193441;
-}
+  body {
+    background-color: #193441;
+  }
 
-li {
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-right: 0px;
-  padding-left: 0px; 
-}
+  li {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px; 
+  }
 
-.a {
-  color: #fcfff5;
-}
+  .a {
+    color: #fcfff5;
+  }
 
-.container-fluid {
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-right: 0px;
-  padding-left: 0px; 
-}
+  /*.a:hover {
+    background-color: red;
+  }*/
 
-.navbar {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  padding-right: 0px;
-  padding-left: 0px; 
-  border-bottom: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-top: 0px;
-}
+  .container-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px; 
+  }
 
-.navbar-nav {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
+  .navbar {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px; 
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
 
-.nav {
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-right: 0px;
-  padding-left: 0px; 
-}
+  .navbar-nav {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 
-#navLink {
-  display: inline-block;
-  width: 50%;
-  text-align: center;
-  border: solid black 1px;
-  margin-left: 1px;
-  margin-right: -6px;
-  padding-right: 0px;
-  padding-left: 0px;
-  height: 52px;
-  background-color: #91aa9d;
-  color: #fcfff5;  
-}
+  .nav {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px; 
+  }
 
-.navheader {
-  text-align: center;
-}
+  #navLink {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    border: solid black 1px;
+    margin-left: 1px;
+    margin-right: -6px;
+    padding-right: 0px;
+    padding-left: 0px;
+    height: 52px;
+    background-color: #91aa9d;
+    color: #fcfff5;  
+  }
 
-#tempdiv {
-  height: 182px;
-}
+  /*#navLink:hover {
+    background-color: white;
+  }*/
 
-#loginDiv {
-  background-color: #d1dbbd;
-}
+  .navheader {
+    text-align: center;
+  }
 
-.form-control {
-  border-radius: 0px;
-}
+  #tempdiv {
+    height: 182px;
+  }
 
-.theNav {
-  background-color: #d1dbbd;
-}
+  #loginDiv {
+    background-color: #d1dbbd;
+  }
 
-.saveBtn {
-  background-color: #3e606f;
-  color: #fcfff5;
-}
+  .form-control {
+    border-radius: 0px;
+  }
 
-.jobUrl {
-  background-color: #3e606f;
-  color: #fcfff5;
-}
+  .theNav {
+    background-color: #d1dbbd;
+  }
 
-.subBtn {
-  background-color: #91aa9d;
-  color: #fcfff5;
-}
+  .saveBtn {
+    background-color: #3e606f;
+    color: #fcfff5;
+  }
 
-.wellColor {
-  background-color: #fcfff5;
-}
+  .jobUrl {
+    background-color: #3e606f;
+    color: #fcfff5;
+  }
 
-#headerA {
-  color: #193441;
+  .subBtn {
+    background-color: #91aa9d;
+    color: #fcfff5;
+  }
+
+  .wellColor {
+    background-color: #fcfff5;
+  }
+
+  #headerA {
+    color: #193441;
+  }
+}
+/*///////////////////////////////////////////*/
+@media (min-width: 761px){
+  .removeGutter {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+    margin: auto; 
+  }
+
+  .btn {
+    border-radius: 0px;
+  }
+
+  .btn-sm {
+    border-radius: 0px;
+  }
+
+  .well {
+    border-radius: 0px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .underNav {
+    margin-top: 150px;
+    text-align: center;
+  }
+
+  body {
+    background-color: #193441;
+  }
+
+  li {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px; 
+  }
+
+  .a {
+    color: #fcfff5;
+  }
+
+  /*.a:hover {
+    background-color: red;
+  }*/
+
+  .container-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px; 
+  }
+
+  .navbar {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px; 
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+  }
+
+  .navbar-nav {
+    float: right;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .nav {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px; 
+  }
+
+  #navLink {
+    display: inline-block;
+    text-align: center;
+    border: solid black 1px;
+    padding-right: 0px;
+    padding-left: 0px;
+    height: 63px;
+    width: 100px;
+    background-color: #91aa9d;
+    color: #fcfff5;  
+  }
+
+  .navheader {
+    text-align: center;
+    margin-left: 5%;
+  }
+
+  #tempdiv {
+    height: 182px;
+  }
+
+  #loginDiv {
+    background-color: #d1dbbd;
+  }
+
+  .form-control {
+    border-radius: 0px;
+  }
+
+  .theNav {
+    background-color: #d1dbbd;
+  }
+
+  .saveBtn {
+    background-color: #3e606f;
+    color: #fcfff5;
+  }
+
+  .jobUrl {
+    background-color: #3e606f;
+    color: #fcfff5;
+  }
+
+  .subBtn {
+    background-color: #91aa9d;
+    color: #fcfff5;
+  }
+
+  .wellColor {
+    background-color: #fcfff5;
+  }
+
+  #headerA {
+    color: #193441;
+  }
 }
