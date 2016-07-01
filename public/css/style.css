@@ -97,10 +97,6 @@
     font-family: 'Roboto', sans-serif;  
   }
 
-  /*#navLink:hover {
-    background-color: white;
-  }*/
-
   .navheader {
     text-align: center;
   }
@@ -146,6 +142,10 @@
   #headerA {
     color: #193441;
     font-family: 'Roboto', sans-serif;
+  }
+
+  .form-group {
+    text-align: center;
   }
 }
 /*///////////////////////////////////////////*/
@@ -195,10 +195,6 @@
     color: #fcfff5;
     font-family: 'Roboto', sans-serif;
   }
-
-  /*.a:hover {
-    background-color: red;
-  }*/
 
   .container-fluid {
     margin-left: 0px;
@@ -295,4 +291,9 @@
     color: #193441;
     font-family: 'Roboto', sans-serif;
   }
+
+  #navLink:hover {
+    background-color: #193441;
+  }
 }
+
