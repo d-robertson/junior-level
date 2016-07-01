@@ -40,6 +40,7 @@
 
   .a {
     color: #fcfff5;
+    font-family: 'Roboto', sans-serif;
   }
 
   /*.a:hover {
@@ -92,7 +93,8 @@
     padding-left: 0px;
     height: 52px;
     background-color: #91aa9d;
-    color: #fcfff5;  
+    color: #fcfff5;
+    font-family: 'Roboto', sans-serif;  
   }
 
   /*#navLink:hover {
@@ -122,16 +124,19 @@
   .saveBtn {
     background-color: #3e606f;
     color: #fcfff5;
+    font-family: 'Roboto', sans-serif;
   }
 
   .jobUrl {
     background-color: #3e606f;
     color: #fcfff5;
+    font-family: 'Roboto', sans-serif;
   }
 
   .subBtn {
     background-color: #91aa9d;
     color: #fcfff5;
+    font-family: 'Roboto', sans-serif;
   }
 
   .wellColor {
@@ -140,6 +145,7 @@
 
   #headerA {
     color: #193441;
+    font-family: 'Roboto', sans-serif;
   }
 }
 /*///////////////////////////////////////////*/
@@ -187,6 +193,7 @@
 
   .a {
     color: #fcfff5;
+    font-family: 'Roboto', sans-serif;
   }
 
   /*.a:hover {
@@ -238,7 +245,8 @@
     height: 63px;
     width: 100px;
     background-color: #91aa9d;
-    color: #fcfff5;  
+    color: #fcfff5;
+    font-family: 'Roboto', sans-serif;  
   }
 
   .navheader {
@@ -265,16 +273,19 @@
   .saveBtn {
     background-color: #3e606f;
     color: #fcfff5;
+    font-family: 'Roboto', sans-serif;
   }
 
   .jobUrl {
     background-color: #3e606f;
     color: #fcfff5;
+    font-family: 'Roboto', sans-serif;
   }
 
   .subBtn {
     background-color: #91aa9d;
     color: #fcfff5;
+    font-family: 'Roboto', sans-serif;
   }
 
   .wellColor {
@@ -283,5 +294,6 @@
 
   #headerA {
     color: #193441;
+    font-family: 'Roboto', sans-serif;
   }
 }
