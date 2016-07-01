@@ -28,9 +28,14 @@ app.use(function(req, res, next) {
   res.locals.currentUser = req.user;
   next();
 });
-
+//My base route sends an api call to dice.com for job postings matching the
+//key words entry and junior for development jobs
+//I check to see if there were any inputs in my zipcode field from my index.ejs
+//If there is a zipcode entered i use it to concat my url in the api call
+//and update the results to match
+//I then store the results in my session middleware so that if there are no
+//changes to the api call i dont have to make another one
 app.get('/', function(req, res) {
-  console.log(req.user);
   if(!req.session.results || req.query.zipcode !== req.session.storedZip){
     console.log('IF!!!!!');
     var url = 'http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=entry+junior';
@@ -54,16 +59,13 @@ app.get('/', function(req, res) {
     res.render('index', { results: req.session.results });
   }
 });
-
+//my post route hit when the save job button is clicked
+//I check to see that the user is logged in
+//then find or create a job in my job table and update the join table
 app.post('/favJob', function(req, res){
-  console.log('console!');
-  // console.log('post route');
-  // console.log(req.body);
   if(!req.user){
-    console.log('hit the if');
     res.status(401).send('need to be logged in');
   } else {
-    console.log('hit the else');
     db.job.findOrCreate({
       where: {
         title : req.body.title,
@@ -83,7 +85,8 @@ app.post('/favJob', function(req, res){
     });
   }
 });
-
+//my user jobs route checks to see if the user is logged in
+//finds all the jobs in the join table that the user is associated with
 app.get('/jobs', isLoggedin, function(req, res) {
   db.user.findOne({
     where: {
@@ -95,9 +98,9 @@ app.get('/jobs', isLoggedin, function(req, res) {
     });
   });
 });
-
+//My ajax delete route finds the user
+//then with the job id as req.params.id deletes the job association
 app.delete('/deleteJob/:id', function(req, res){
-  console.log('hit delete route');
   db.user.findOne({
     where: {
       id: req.user.id

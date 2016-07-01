@@ -19,6 +19,9 @@
           </div>
           <div class="navbar">
             <ul class="nav navbar-nav">
+              <!-- I check if there is a user logged in
+              if there is i display the logout and jobs links
+              if not i display the signup and login links -->
               <% if(!currentUser){ %>
                 <li id="navLink"><a href="/auth/signup"><p class="a">Signup</p></a></li>
                 <li id="navLink"><a href="/auth/login"><p class="a">Login</p></a></li>

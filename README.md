@@ -1,4 +1,4 @@
-# junior-level
+# juniorDev
 
 Express authentication template using Passport + flash messages + custom middleware
 
@@ -28,11 +28,16 @@ Express authentication template using Passport + flash messages + custom middlew
 
 ##### My Api's 
   * Dice- 'http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=entry+junior'
-  *Authentic- key: 1e053aff7cf7550dbc3d62c7529f4124 baseUrl: https://authenticjobs.com/api/
 
 ###### Goals
-  * select jobs to save using database's
-  * navbar--All jobs/Your jobs/user submit job/login
   * linkedin oAuth
-  * css styles
-  * User Profile
+  * add more api's and web scrapes
+  * clean up code
+  * more responsive styling
+
+####### Bugs
+  * when larger than 760px screen size my home link which is the brand stops working
+  * my ajax calls dont display flash messages on error
+  * when a user is not logged in and trys to save a job the ajax doesn't catch
+    a error
+
