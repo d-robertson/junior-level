@@ -35,6 +35,7 @@ Express authentication template using Passport + flash messages + custom middlew
   * clean up code
   * more responsive styling
   * disable save button after job is saved
+  * add the ability to see the next 50 results
 
 ####### Bugs
   * when larger than 760px screen size my home link which is the brand stops working
