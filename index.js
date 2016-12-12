@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 var ejsLayouts = require('express-ejs-layouts');
 var bodyParser = require('body-parser');
@@ -16,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public/'));
 app.use(ejsLayouts);
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || 'supersecretthing',
   resave: false,
   saveUninitialized: true
 }));

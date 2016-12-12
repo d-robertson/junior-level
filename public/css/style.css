@@ -20,6 +20,7 @@
     margin-bottom: 1px;
     padding-top: 0px;
     padding-bottom: 0px;
+    margin-top: 10px;
   }
 
   .underNav {
@@ -42,6 +43,29 @@
     color: #fcfff5;
     font-family: 'Roboto', sans-serif;
   }
+
+  .searchInput {
+    height: 100%;
+    border: solid black 1px;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    height: 100%;
+  }
+
+  .form {
+    margin-left: 1px;
+    margin-right: 1px;
+    height: 50px;
+  }
+
+  .button {
+    height: 100%;
+    border: solid black 1px;
+  }
+
+
 
   /*.a:hover {
     background-color: red;
